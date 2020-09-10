@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es" dir="vertical-rl">
+    <head>
+        <meta charset="UFT-8"/>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0 minimum-scale=1.0,"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="descripcion" content="Muestra una descripcion en las busquedas de Google">
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+         <link rel="stylesheet" href="vendors/FontAwesome/css/all.css">
+        <link rel="stylesheet" href="style.css">
+
+        <script src="js/DOMGui.js"></script>
+        <script src="js/MultimediaPlayer.js"></script>
+          
+        <title>GAME BOY COLOR</title>
+    </head>
+    <body>
+            <!--cuerpo amarillo-->
+        <div id="player">
+
+            <!--pantalla marron-->
+            <div class="cuerpo_interno">
+                <div class="led"></div>
+                <img src="imagenes/img1.png">
+            </div>
+
+            <!--pantalla blanca-->
+            <div class="pantalla"></div>
+
+           <div id="main">
+               <div class="playback_controls">
+                    <h2 id="title">Title</h2>
+                    <h3 id="artist">Perigee</h3>
+
+                    <div class="time-holder">
+
+                          <span id="time_played">00:00</span>
+                          <span id="full_time">00:00</span>
+
+                        <div class="slider">
+                          <div class="fill"></div>
+                        </div>
+                    </div>
+
+                  <!--cruceta-->
+                    <div class="conten_cruceta">
+                        <i class="fa fa-backward" id="prev"></i>
+                        <i class="fa fa-play" id="playpause"></i>
+                        <i class="fa fa-forward" id="next"></i>
+                        <i class="fas fa-volume-up" id="volumeUp"></i>
+                        <i class="fas fa-volume-down" id="volumeDown"></i>
+                    </div>
+               </div>
+                <audio controls></audio>
+           </div>
+
+            <!--===select y start===-->
+            <div class="conten_select__start">
+                <div class="select">
+                    <span class="text_1">Select</span>
+                </div>
+                <div class="start">
+                    <span class="text_2">Start</span>
+                </div>
+            </div>
+            
+            <!--====parlantes====-->
+            <div class="conten_parlantes">
+                <div class="item_parlante"></div>
+                <div class="item_parlante"></div>
+                <div class="item_parlante"></div>
+                <div class="item_parlante"></div>
+                <div class="item_parlante"></div>
+            </div>
+            
+            <ol id="playlist">
+
+                <li class="playing" id="1"><a class="track" ><span class="title">Clocks</span> - <span class="artist">COLD PLAY</span></a> <span class="time">4:13</span></li>
+
+                <li class="playing" id="2"><a class="track" ><span class="title">No scrubs</span> - <span class="artist">TLC</span></a> <span class="time">3:34</span></li>
+
+                <li class="playing" id="3"><a class="track" ><span class="title">Satisfy you</span> - <span class="artist">DIDDY</span></a> <span class="time">4:46</span></li>
+
+            </ol>
+            
+        </div>
+        
+        <script src="js/main.js"></script>
+     
+    </body>
+</html>
+        
+        

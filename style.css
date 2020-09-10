@@ -1,0 +1,494 @@
+
+*{
+    left: auto;
+    padding: auto;
+      font-family: 'Press Start 2P', cursive;
+}
+
+body{
+    background-color: rgb(0, 0, 0);
+}
+
+#player{
+    width: 255px;
+    height: 420px;
+    border: 2px solid red;
+    background-color: #001233;
+    position: relative;
+    border-radius: 10px 10px 60px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 90px;
+    border: 3px solid black;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0px 2px 68px 10px #33415c;
+}
+
+.cuerpo_interno{
+    width: 230px;
+    height: 200px;
+    background-color: #7d8597;
+    position: absolute;
+    top: 20px;
+    left: 12px;
+    border-radius: 10px 10px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex: 1 1 320px;
+    min-width: 200px;
+}
+
+img{
+    top: 80px;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 60px;
+    width: 50%;
+    height: 50%;
+    z-index: 10;
+    position: relative;
+}
+
+/*
+.logo{
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    top: 195px;
+    left: 25px;
+}
+*/
+
+.pantalla{
+    width: 160px;
+    height: 144px;
+    background-color: white;
+    position: absolute;
+    top: 35px;
+    left: 50px;
+    border-radius: 3px;
+    background-image: url("assets/covers/1.jpg");
+    background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+/*      z-index: 10;*/
+}
+
+.led{
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    position: absolute;
+    top: 60px;
+    left: 9px;
+    border-radius: 10px;
+}
+
+/*============CRUCETA================*/
+
+.conten_cruceta{
+    position: absolute;
+    top: 235px;
+    left: 10px;
+    width: 120px;
+    height: 100px;
+/*    border: 1px solid;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#prev{
+/*    position: relative;*/
+    top: 20px;
+    left: -50px;
+    font-size: 25px;
+    cursor: pointer;
+    color: #7d8597;
+}
+
+#playpause{
+/*    position: relative;*/
+    top: -2px;
+    left: -10px;
+    font-size: 25px;
+    cursor: pointer;
+     color: #7d8597;
+}
+
+#next{
+/*    position: relative;*/
+    top: 0px;
+    left: -50px;
+    font-size: 25px;
+    cursor: pointer;
+     color: #7d8597;
+}
+
+#volumeUp{
+    position:absolute;
+    top: 5px;
+    left: 50px;
+    font-size: 25px;
+    cursor: pointer;
+     color: #7d8597;
+}
+
+#volumeDown{
+    position:absolute;
+    top: 70px;
+    left: 50px;
+    font-size: 25px;
+    cursor: pointer;
+     color: #7d8597;
+}
+
+
+#player audio {
+  position: absolute;
+  top: 300px;
+  height: 0;
+  width: 0;
+  z-index: 1;
+}
+
+#playlist{
+    display: none;
+}
+
+h2{
+    position: relative;
+    top: 90px;
+    left:-90px ;
+    text-align: center;
+    color: #001845;
+    font-size: .8rem;
+    transform: rotate(270deg);
+}
+
+h3{
+    position: relative;
+    top: 65px;
+    left: 100px;
+    text-align: center;
+    color: #33415c;
+    font-size: .8rem;
+     transform: rotate(270deg);
+}
+
+
+/*=============BARRA SLIDER=============*/
+
+
+.time-holder {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    padding-bottom: 0px;
+    font-size: .6em;
+    position: relative;
+    top: 240px;  
+}
+
+.slider {
+    width: 200px;
+    height: 12px;
+    position: relative;
+    cursor: pointer;
+    top: -344px;
+    left:5px;
+/*    border: 1px solid;*/
+    border-radius: 50px;
+    z-index: 10;
+}
+
+.slider:before {
+  position: absolute;
+  top: 50%;
+  margin-top: -2px;
+  left: 0;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: rgba(0, 0, 0, 0.51);
+}
+
+.fill {
+    position: absolute;
+    top: 50%;
+    height: 3px;
+    width: 100%;
+    transform-origin: 0% 0%;
+    transform: scaleX(0);
+    margin-top: -2px;
+    left: 0;
+    content: "";
+    display: block;
+    background-color: #979dac;
+    border-radius: 50px;
+}
+
+/*
+.minutos{
+    width: 160px;
+    height: 60px;
+    display: flex;
+    border: 1px solid;
+}
+*/
+
+#time_played{
+    position: relative;
+    top: -30px;
+    left: 130px;
+    background: #023e7d;
+    color: white;
+    width: 45px;
+    height: 45px;
+/*    border: 1px solid;*/
+    border-radius: 50%;
+    border-width: 2px;
+/*    border-style: double;*/
+    text-align: center;
+    line-height:49px;
+/*    font-weight: bold;*/
+    letter-spacing: -2px;
+    font-size: .6rem;
+    box-shadow: 1px 1px 1px 1px #979dac;
+}
+
+#full_time{
+    position: relative;
+    top: -60px;
+    left: 130px;
+    background: #023e7d;
+    color: #001233;
+    width: 45px;
+    height: 45px;
+/*    border: 1px solid;*/
+    border-radius: 50%;
+    border-width: 2px;
+/*    border-style: double;*/
+    text-align: center;
+    line-height:45px;
+    font-weight: bold;
+    letter-spacing: -2px;
+    font-size: .6rem;
+    box-shadow: 1px 1px 1px 1px #979dac;
+}
+
+
+/*============BOTON A Y BOTON B================*/
+/*
+.conten_A__B{
+    position: relative;
+    left: -180px;
+    top: 0px;
+}
+
+.button_B{
+    width: 35px;
+    height: 35px;
+    background-color: GREEN;
+    position: absolute;
+    top: 290px;
+    left: 100px;
+    border-radius: 100px;
+    font-size: 1.5rem;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    line-height: 35px; 
+}
+
+.button_A{
+    width: 35px;
+    height: 35px;
+    background-color: rgba(0, 0, 255, 0.685);
+    position: absolute;
+    top: 270px;
+    left: 145px;
+    border-radius: 100px;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    line-height: 35px; 
+}
+*/
+
+
+/*============BOTON START Y SELECT================*/
+
+.conten_select__start{
+    position: absolute;
+    top: 340px;
+    width: 100px ;
+    height: 40px;
+    left: 70px;
+/*    margin-bottom: auto;*/
+/*    margin-top: 330px;*/
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    font-family: sans-serif;
+    display: flex;
+}
+
+.select{
+    width: 30px;
+    height: 10px;
+    background-color: #0466c8;
+    border-radius: 50px;
+    margin: 0 20px 0 0;
+}
+
+.text_1{
+    position: relative;
+    top: 10px;
+    left: -8px;
+    font-size: .6rem;
+    text-align: center;
+    font-weight: bold;
+    color: #7d8597;
+}
+
+.start{
+    width: 30px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50px;
+    background-color: #0466c8;
+}
+
+.text_2{
+    position: relative;
+    top: 10px;
+    left: -5px;
+    font-size: .6rem;
+    text-align: center;
+    font-weight: bold;
+    color: #7d8597;
+}
+
+
+/*===========PARLANTES================*/
+
+.conten_parlantes{
+    position: absolute;
+    left: 175px;
+    top: 355px;
+    display: flex;
+    transform: rotate(-40deg);
+}
+
+[class^=item_parlante]{
+    width: 6px;
+    height: 40px;
+    background-color: rgb(96, 96, 96);
+    margin: 0 7px 0 0;
+    display: inline-grid;
+    position: relative;
+    transform: rotate(-20deg);
+    border-radius: 5px 5px 5px 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
